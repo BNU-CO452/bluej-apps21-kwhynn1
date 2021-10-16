@@ -1,50 +1,60 @@
 import java.util.*;
 
 /**
- * This class contains information about an undergraduate course
- * at BNU together with a list of student who are enrolled
- *
- * @author Derek Peacock
- * @version 1.0 14/07/2021
- */
+* This class contains information about the different courses. Methods
+* allow for printing to the terminal screen.
+*
+* @author  Kyle Whynn
+* @version 1.0 
+*/
 public class Course
 {
-    // A unique identifier e.g. BT1CTG1
+    // Code for course
     private String code;
-    // The full title including qualification and subject
+    // Course title
     private String title;
+    // Module oject
+    private Module module;
     
     /**
-     * Create a Course with a maximum number of enrolments. 
-     * All other details are set to unkown values.
-     */
-    public Course(String code, String title)
+    * Create a course object with course code and title. 
+    */
+        public Course(String code, String title)
     {
         this.code = code;
         this.title = title;
     }
 
+    /**
+    * Print heading to the terminal.
+    */
+        private void printHeading()
+    {
+        System.out.println(" --------------------------------");
+        System.out.println("           Course Details        ");
+        System.out.println(" --------------------------------");
+        System.out.println();
+    }
     
     /**
-     * Print the details of the course, the list
-     * of students enrolled and the module
-     */
-    public void print()
+    * Print the details of the course
+    */
+        public void print()
     {
         printHeading();
         
-        System.out.println(" Course Code: " + code + ": " + title);
+        System.out.println(" Course Code : " + code  );
+        System.out.println(" Course Title: " +  title);
         System.out.println();
+        module.print();
     }
     
-    /**
-     * Print out the details of the course to the terminal.
-     */
-    private void printHeading()
+    /***
+    * Adds module object to course object
+    */ 
+        public void addModule(Module module)
     {
-        System.out.println(" --------------------------------");
-        System.out.println("   App211: Course Details");
-        System.out.println(" --------------------------------");
-        System.out.println();
+        this.module = module;
     }
+
 }

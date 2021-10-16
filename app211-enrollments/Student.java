@@ -1,24 +1,25 @@
 /**
- * The Student class contains essential information that identifies 
- * a student at BNU.  The class also contains information 
- * concerning the course the student is currently enrolled on
- * 
- * @author Michael Kölling and David Barnes
- * @modified by Derek Peacock and Nicholas Day
- * @version 2021:08:15
- */
+* This class contains information about
+* students. Methods allow for enrollment and
+* printing to terminal.
+* 
+* @author  Kyle Whynn
+* @version 1.0
+*/
+
+
 public class Student
 {
-    // A unique 8 digit BNU identifier
+    // ID number
     private int id;
-    // the student's full name
+    // Student Name
     private String name;
-    // The course the student is enrolled on
+    // Course object
     private Course course;
     
     /**
-     * Create a new student with a given name and ID number.
-     */
+    * Create student object with a name and ID number.
+    */
     public Student(String name, int id)
     {
         this.name = name;
@@ -26,34 +27,37 @@ public class Student
     }
 
     /**
-     * Return the full name of this student.
-     */
-    public String getName()
-    {
-        return name;
-    }
-
-     /**
-     * Return the student ID of this student.
-     */
-    public int getID()
-    {
-        return id;
-    }
-
-    public void enrol(Course course)
+    * Enrolls student object to a course object.
+    */
+    public void enroll(Course course)
     {
         this.course = course;
     }
     
     /**
-     * Print the student's name and ID number to the output terminal.
-     */
-    public void print()
+    * Print heading to the terminal.
+    */
+    private void printHeading()
     {
-        System.out.println(" Student ID: " + id + " Name: " + name);
+        System.out.println(" --------------------------------");
+        System.out.println("           Student Details       ");
+        System.out.println(" --------------------------------");
+        System.out.println();
     }
     
+    /**
+    * Print the student's name and ID number to terminal.
+    */
+    public void print()
+    {
+        printHeading();
+        System.out.println("Student ID: " + id);
+        System.out.println("Name      : " + name);
+    }
+    
+    /**
+    * Print course that the student object is enrolled on.
+    */
     public void printCourse()
     {
         course.print();
