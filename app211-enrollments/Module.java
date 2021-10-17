@@ -16,69 +16,69 @@ public class Module
     // title for module
     private String title;
     
-    /**
-    * Create a module object with module code and title.
-    */
-        public Module(String code,String title)
-    {
-        this.code=code;
-        this.title=title;
-    }
+/**
+* Create a module object with module code and title.
+*/
+public Module(String code,String title)
+{
+    this.code=code;
+    this.title=title;
+}
        
-    /**
-    * Get module code String
-    */
-        public String Getcode()
-    {
-        return code;
-    }
+/**
+* Get module code String
+*/
+public String Getcode()
+{
+    return code;
+}
+      
+/**
+* Get module title String
+*/ 
+public String Gettitle()
+{
+    return title;
+}
     
+/** 
+* Get module credit value
+*/
+public int GetCreditvalue()
+{
+    return creditvalue;
+}
     
-    /**
-    * Get module title String
-    */ 
-        public String Gettitle()
-    {
-        return title;
-    }
+/** 
+* set credit value of a module
+*/
+public void SetCreditvalue(int creditvalue)
+{
+    this.creditvalue=creditvalue;
+}
     
-    /** 
-    * Get module credit value
-    */
-        public int GetCreditvalue()
-    {
-        return creditvalue;
-    }
+/**
+* Print heading to the terminal.
+*/
+private void printHeading()
+{
+    System.out.println(" --------------------------------");
+    System.out.println("           Module Details        ");
+    System.out.println(" --------------------------------");
+    System.out.println();
+}
     
-    /** 
-    * set credit value of a module
-    */
-        public void SetCreditvalue(int creditvalue)
-    {
-      this.creditvalue=creditvalue;
-    }
-    
-    /**
-    * Print heading to the terminal.
-    */
-        private void printHeading()
-    {
-        System.out.println(" --------------------------------");
-        System.out.println("           Module Details        ");
-        System.out.println(" --------------------------------");
-        System.out.println();
-    }
-    
-    /**
-    * Print the details of the module
-    */
-         public void print()
-    {
-        printHeading();
+/**
+* Print the details of the module
+*/
+public void print()
+{
+    printHeading();
         
-        System.out.println("Module Code : " + code);
-        System.out.println("Module Title: " + title);
-        System.out.println("Credit Value: " + creditvalue);
-        System.out.println();
-    }
+    System.out.println("Module Code : " + code);
+    System.out.println("Module Title: " + title);
+    System.out.println("Credit Value: " + creditvalue);
+    System.out.println();
+}
+
 }
