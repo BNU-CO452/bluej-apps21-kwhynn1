@@ -1,58 +1,79 @@
 /**
- * Modules form part of a course and contain
- * credits that students achieve when they
- * pass the module with a mark of 40+
- *
- * @author Derek Peacock and Nicholas Day
- * @version 1.0 17/07/2021
- */
+* This class contains information about the different
+* modules. Methods allows for the getting and printing of 
+* information.
+* 
+* @author Kyle Whynn
+* @version 1
+*/
 public class Module
 {
-    // Most modules are worth 15 credits
-    public static final int CREDIT = 15;
-    
+    // credit value for module
+    private int creditvalue=15;
+    // code for module
     private String code;
+    // title for module
     private String title;
-
+    // Module Mark object
+    private ModuleMark modulemark;
+    // Course Object
+    Course course;
+    
     /**
-     * Constructor for objects of class Module 
-     * which initialises the module code and title
+     * This constructor creates a student object with a
+     * fixed module code and title. 
      */
-    public Module(String code, String title)
+    public Module() 
     {
-        this.code = code;
-        this.title = title;
+        this("CO452", "Programming Concepts");
     }
-
-   
+    
+    /**
+     * Create a module object with module code and title.
+     */
+    public Module(String code,String title)
+    {
+        this.code=code;
+        this.title=title;      
+    }
+       
+    /**
+     * Get module code String
+     */
     public String getCode()
     {
-        return code;
+        return code;  
     }
     
-    
+    /**
+     * Get module title String
+     */ 
     public String getTitle()
     {
         return title;
     }
     
-    /**
-     * Print out the code and title of this module
-     * but stay on the same line so that credits
-     * can be added if needed.
+    /** 
+     * Get module credit value
      */
-    public void print()
+    public int getCreditValue()
     {
-        System.out.println();
-        System.out.print(" " + code + ": " + "\t" + title);
+        return creditvalue;
     }
     
-    /**
-     * Print out the credit on the current line
-     * so that a mark and grade could be added
+    /** 
+     * set credit value of a module
      */
-    public void printCredit()
-    {
-        System.out.print("\t  " + CREDIT + " credits");
+    public void setCreditvalue(int creditvalue)
+    {  
+        this.creditvalue=creditvalue;
+    }
+
+    /**
+     * Print the details of the module
+     */
+    public void print()
+    {    
+        System.out.println("Module Code : " + getCode() + " Module Title: " + getTitle() + " Credit Value: " + getCreditValue());
     }
 }

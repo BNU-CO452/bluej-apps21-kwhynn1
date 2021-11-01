@@ -1,0 +1,22 @@
+Student kyle = new Student("Kyle", 22137070);
+kyle.print();
+Student ID: 22137070 Student Name: Kyle
+Course computing = new Course("BT1CWD1", "BSc Computing & Web");
+kyle.enroll(computing);
+kyle.printCourse();
+Course Code : BT1CWD1 Course Title: BSc Computing & Web
+Module c0452 = new Module("CO452", "Programming Concepts");
+computing.addModule(c0452);
+ModuleMark moduleMa1 = new ModuleMark(c0452);
+moduleMa1.setMark(50);
+kyle.addMark(moduleMa1);
+kyle.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+Student ID: 22137070 Student Name: Kyle
+
+Course Code : BT1CWD1 Course Title: BSc Computing & Web
+
+Module Code : CO452 Module Title: Programming Concepts Credit Value: 15 Module Mark: 50

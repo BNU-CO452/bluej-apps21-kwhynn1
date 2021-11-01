@@ -1,62 +1,49 @@
 
 /**
- * Write a description of class ModuleMark here.
+ * This class contains information about the module marks.
+ * Methods allow for the setting and printing of module details.
  *
- * @author Derek Peacock and Nicholas Day
- * @version 2021-08-18
+ * @author  Kyle Whynn
+ * @version 1
  */
 public class ModuleMark
 {
-    private int mark;
-    private Module module;
+    private int mark = 0;
+    public Module module;
     
     /**
-     * Constructor for objects of class ModuleMark
+     * Constructor for Module MArk objects 
      */
     public ModuleMark(Module module)
     {
-        mark = 0;
-        this.module = module;
+        this.module = module;   
     }
     
+    /**
+     * Get course code
+     */ 
     public int getValue()
     {
         return mark;
     }
     
     /**
-     * If the mark is 40% or more then the 
-     * student is awarded the module's credit.
-     */
-    public int getCredit()
-    {
-        if(mark <= Grades.F.getValue())
-        {
-            return 0;
-        }
-        else
-        {
-            return Module.CREDIT;
-        }
-    }
-    
+     * Sets mark for a module
+     */ 
     public void setMark(int mark)
     {
         this.mark = mark;
     }
     
-    public Module getModule()
+    /**
+     * Prints out the details of the module object
+     */ 
+    public void print () 
     {
-        return module;
+    
+        System.out.println("Module Code : " + module.getCode() + " Module Title: " + module.getTitle() + " Credit Value: " + module.getCreditValue() + " Module Mark: " + getValue());
+    
     }
     
-    /**
-     * Print the module details and any credit
-     * that has been awarded.
-     */
-    public void print()
-    {
-        module.print();
-        System.out.print("\t  " + getCredit() + "\t" + mark);
-    }
+    
 }
