@@ -8,9 +8,10 @@
  */
 public class ModuleMark
 {
-    private int mark = 0;
+    private int mark ;
     public Module module;
-    
+    private Course course;
+  
     /**
      * Constructor for Module MArk objects 
      */
@@ -40,10 +41,8 @@ public class ModuleMark
      */ 
     public void print () 
     {
-    
-        System.out.println("Module Code : " + module.getCode() + " Module Title: " + module.getTitle() + " Credit Value: " + module.getCreditValue() + " Module Mark: " + getValue());
-    
+        System.out.print(module.getCode() + "\t " + module.getTitle() + "\t\t " + module.getCreditValue() + "\t " + getValue() + " ");
     }
-    
+     
     
 }

@@ -77,7 +77,7 @@ public class Course
         Module moduleCo452 = new Module ("CO452","Programming Concepts");
         Module moduleCo450 = new Module ("CO450","Computer Architectures");
         Module moduleCo456 = new Module ("CO456","Web Development");
-        Module moduleCo454 = new Module ("CO454","Digital Technologies & Professional Practice");
+        Module moduleCo454 = new Module ("CO454","Professional Practice");
         
         addModules(moduleCo450);
         addModules(moduleCo452);       
@@ -101,8 +101,17 @@ public class Course
     */ 
     public void addModule(Module module)
     {
+      if(modules.size() < MAXN_MODULES)
+      {
         this.module = module;
         modules.add(module);
+      } 
+      
+      else 
+      {
+          System.out.println("Module Cannot be Added");  
+      }
+      
     } 
     
     /**
@@ -110,32 +119,54 @@ public class Course
      */
     public Grades convertToGrade(int mark)
     {
-        if (mark == Grades.A.getValue())
+        if (mark > Grades.A.getValue())
         {
-        return Grades.A;
+            return Grades.NS;
+        }
+   
+        else if (mark > Grades.B.getValue())
+        {
+            return Grades.A;
         }
         
         else if (mark >=Grades.B.getValue()) 
         {
-        return Grades.B;
+            return Grades.B;
         }
         
         else if (mark >= Grades.C.getValue())
         {
-        return Grades.C;
+            return Grades.C;
         }
         
         else if (mark >= Grades.D.getValue()) 
         {
-        return Grades.D;
+            return Grades.D;
         }
         
-         else if (mark >=Grades.F.getValue()) 
+        else if (mark >=Grades.F.getValue()) 
         {
-        return Grades.F;
+            return Grades.F;
         }
-
-        return Grades.NS;
+        
+            return Grades.NS;
+    }
+    
+    /**
+     * Caculates and returns the average grade for student
+     */
+    public Grades averageGrade(ArrayList<ModuleMark> marks)
+    {  
+        int avgGrade=0;
+        
+       for (ModuleMark mark: marks)
+       {
+           avgGrade =  avgGrade + mark.getValue();
+       }
+        
+        avgGrade = avgGrade / MAXN_MODULES;
+        grade = convertToGrade (avgGrade);
+        return grade;
     }
     
     /**
@@ -145,7 +176,7 @@ public class Course
     {
          for (Module module:modules)
         {
-          module.print();
+            module.print();
         }
     }
     

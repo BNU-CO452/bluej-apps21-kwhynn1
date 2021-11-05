@@ -1,0 +1,29 @@
+Student Kyle = new Student();
+Course computing = new Course();
+Module modules = new Module();
+Kyle.enroll(computing);
+computing.addModules(modules);
+ModuleMark moduleMa1 = new ModuleMark(modules);
+Kyle.createMarks();
+Kyle.addMark(moduleMa1);
+Kyle.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+Student ID: 22137070 Student Name: Kyle
+
+Course Code : BT1CWD1 Course Title: BSc Computing & Web
+
+---- 	 -------------------------- 	 ------	 ----- 	-----
+Code 	 Module 			 Credit	 Mark 	Grade
+---- 	 -------------------------- 	 ------	 ----- 	-----
+
+CO450	 Computer Architectures		 15	 100  	A
+CO452	 Programming Concepts		 15	 80  	B
+CO456	 Web Development		 15	 60  	C
+CO454	 Professional Practice		 15	 40  	F
+CO452	 Programming Concepts		 15	 0  	NS
+
+
+ Final Course Grade = B

@@ -19,6 +19,9 @@ public class Student
     private ArrayList<ModuleMark> marks = new ArrayList<ModuleMark>();
     // Module object
     private Module module;
+    // Object for Module Mark
+    private ModuleMark modulemark;
+
     
     /**
      * This constructor creates a student object with a
@@ -77,7 +80,8 @@ public class Student
     public void createMarks()
     {   
       
-         int value= 100;
+        int value= 140;
+         
         for (Module module: course.modules)
         {
            
@@ -96,6 +100,8 @@ public class Student
          for (ModuleMark modulemark:marks)
         {
              modulemark.print();
+             System.out.print(" \t" + course.convertToGrade(modulemark.getValue()));
+             System.out.println("");
         } 
     }
     
@@ -112,7 +118,25 @@ public class Student
         System.out.println();
         printCourse();
         System.out.println();
+        System.out.println("---- \t -------------------------- \t ------\t ----- \t-----");
+        System.out.println("Code \t Module \t\t\t Credit\t Mark \tGrade");
+        System.out.println("---- \t -------------------------- \t ------\t ----- \t-----");
+        System.out.println();
         printModules();
+        
+        Grades finalGrade = course.averageGrade(marks);
+        
+        System.out.println();
+        System.out.println();
+        
+        if(finalGrade == Grades.NS)
+        {
+            System.out.println(" Student hasn't passed yet.");
+        }
+        else
+        {
+            System.out.println(" Final Course Grade = " + finalGrade);
+        }
     }
 
 }
