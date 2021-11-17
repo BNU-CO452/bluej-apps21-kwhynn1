@@ -23,9 +23,15 @@ public class StockDemo
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
         
-        stock.add(new Product(101, "Samsung Galaxy S20"));
-        stock.add(new Product(102, "Apple iPhone 12"));
-        stock.add(new Product(103, "Google Pixel 4A"));
+        stock.add(new Product(101, "Samsung Galaxy S9"));
+        stock.add(new Product(102, "PSP"));
+        stock.add(new Product(103, "PS Vita"));
+        stock.add(new Product(104, "Xbox"));
+        stock.add(new Product(105, "PS3"));
+        stock.add(new Product(106, "PS5"));
+        stock.add(new Product(107, "IPhone"));
+        stock.add(new Product(108, "IPOD"));
+        stock.add(new Product(109, "Acer PC"));
     }
     
     /**
