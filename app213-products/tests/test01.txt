@@ -1,0 +1,24 @@
+ Product game = new Product(100, "PSP");
+game.print();
+ ID 100: PSP stock level: 0
+game.decreaseQuantity(1);
+There is no stock to remove
+game.print();
+ ID 100: PSP stock level: 0
+game.increaseQuantity(1);
+game.print();
+ ID 100: PSP stock level: 1
+game.decreaseQuantity(1);
+game.print();
+ ID 100: PSP stock level: 0
+Product game2 = new Product(101, "PS VITA");
+StockList stockLis1 = new StockList();
+stockLis1.add(game);
+stockLis1.add(game2);
+stockLis1.print();
+
+ Kyle's Stock List
+ ====================
+
+ ID 100: PSP stock level: 0
+ ID 101: PS VITA stock level: 0

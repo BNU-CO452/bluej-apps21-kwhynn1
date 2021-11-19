@@ -1,34 +1,30 @@
 /**
- * Model some details of a product sold by a company.
+ * Contains information about products
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author  Kyle Whynn
+ * @version 1
  */
 public class Product
 {
-    // An identifying number for this product.
+    // product id
     private int id;
-    // The name of this product.
+    // name of prroduct
     private String name;
-    // The quantity of this product in stock.
+    // quantity of product
     private int quantity;
 
     /**
-     * Constructor for objects of class Product.
-     * The initial stock quantity is zero.
-     * @param id The product's identifying number.
-     * @param name The product's name.
+     * Creates a Project object
      */
     public Product(int id, String name)
     {
         this.id = id;
         this.name = name;
-        
         quantity = 0;
     }
 
     /**
-     * @return The product's id.
+     * gets the product's id.
      */
     public int getID()
     {
@@ -36,7 +32,7 @@ public class Product
     }
 
     /**
-     * @return The product's name.
+     * gets the product's name.
      */
     public String getName()
     {
@@ -44,38 +40,55 @@ public class Product
     }
 
     /**
-     * @return The quantity in stock.
+     * gets the amount of quantity in stock.
      */
     public int getQuantity()
     {
         return quantity;
     }
 
+    /**
+     * allows user to set the quantity for a product
+     */
     public void setQuantity(int quantity)
     {
         this.quantity = quantity;
     }
     
+    /**
+     * adds new stock to old stoch quantity
+     */
     public void increaseQuantity(int amount)
     {
         quantity = quantity + amount;
     }
     
+    /**
+     * decreases the number of stock
+     */
     public void decreaseQuantity(int amount)
     {
         if(quantity >= amount)
+        {
             quantity = quantity - amount;
+        } 
+        else if (quantity ==0)
+        {
+            System.out.println("There is no stock to remove");
+        }
     }
     
     /**
-     * @return The id, name and quantity in stock.
+     * return the product information as a string
      */
     public String toString()
-    {
+    {   
         return " ID " + id + ": " +  name + " stock level: " + quantity;
     }
 
-    
+    /**
+     * prints the product information
+     */
     public void print()
     {
         System.out.println(toString());

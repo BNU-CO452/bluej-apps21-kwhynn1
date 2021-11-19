@@ -1,64 +1,88 @@
-
+import java.util.Random;
 /**
- * Demonstrate the StockManager and Product classes.
- * The demonstration becomes properly functional as
- * the StockManager class is completed.
+ * This class is a demo used for testing, inlcudes methods from
+ * the Stocklist class.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * Author   Kyle Whynn
+ * @version 1
  */
 public class StockDemo
 {
-    // The stock manager.
+    // Stocklist object
     private StockList stock;
-
+    
     /**
-     * Create a StockManager and populate it with at least
-     * 10 sample products.
+     * Creates a 10 projects.
+     * 
      */
     public StockDemo(StockList stock)
     {
         this.stock = stock;
         
-        // Add at least 10 products, they must be unique to you
-        // Make sure the ids are sequential numbers
-        
-        stock.add(new Product(101, "Samsung Galaxy S9"));
-        stock.add(new Product(102, "PSP"));
-        stock.add(new Product(103, "PS Vita"));
-        stock.add(new Product(104, "Xbox"));
-        stock.add(new Product(105, "PS3"));
-        stock.add(new Product(106, "PS5"));
-        stock.add(new Product(107, "IPhone"));
-        stock.add(new Product(108, "IPOD"));
-        stock.add(new Product(109, "Acer PC"));
+        stock.add(new Product(100, "Samsung Galaxy S9"));
+        stock.add(new Product(101, "PSP"));
+        stock.add(new Product(102, "PS Vita"));
+        stock.add(new Product(103, "Xbox"));
+        stock.add(new Product(104, "PS3"));
+        stock.add(new Product(105, "PS5"));
+        stock.add(new Product(106, "IPhone"));
+        stock.add(new Product(107, "IPOD"));
+        stock.add(new Product(108, "Acer PC"));
+        stock.add(new Product(109, "Dell PC"));
     }
     
     /**
-     * Provide a demonstration of how the ProductList meets all
-     * the user requirements by making a delivery of each product 
-     * buying it in various amounts and then selling each
-     * product by various amounts. Make sure all the requirements
-     * have been demonstrated.
+     * Runs functions where products are sold and bought. The result
+     * after each is printed on the screen.
      */
     public void runDemo()
-    {
-        // Show details of all of the products before delivery.
-        
+    { 
         stock.print();
-
         buyProducts();
         stock.print();        
-
         sellProducts();
         stock.print();        
     }
     
-    private void buyProducts()
+    /**
+     * Buys a number of products based on the value
+     * given
+     */
+    public void buyProducts()
     {
+       stock.buyProduct(101,10);
+       stock.buyProduct(102,1);
+       stock.buyProduct(103,4);
+       stock.buyProduct(104,3);
+       stock.buyProduct(105,2);
+       stock.buyProduct(106,8);
+       stock.buyProduct(107,6);
+       stock.buyProduct(108,7);
+       stock.buyProduct(109,2);
+       stock.buyProduct(110,1);
     }
 
-    private void sellProducts()
-    {
-    }    
+    /**
+     * Sells a number of proudces based on the number generated
+     */
+    public void sellProducts()
+      {
+        Product product;
+        int quantity = 1;
+        
+        for(int id = 101; id <= 110; id++)
+        {
+            product = stock.findProduct(id);
+            
+            if(product == null)
+            {
+                System.out.println("Product " + id + " Not found");
+            }
+            else
+            {
+               stock.sellProduct(id, quantity);
+            }
+        }
+        
+    }     
 }

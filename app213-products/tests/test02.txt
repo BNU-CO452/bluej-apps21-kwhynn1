@@ -1,0 +1,95 @@
+StockList stockLis1 = new StockList();
+StockDemo stockDem1 = new StockDemo(stockLis1);
+stockDem1.runDemo();
+
+ Kyle's Stock List
+ ====================
+
+ ID 100: Samsung Galaxy S9 stock level: 0
+ ID 101: PSP stock level: 0
+ ID 102: PS Vita stock level: 0
+ ID 103: Xbox stock level: 0
+ ID 104: PS3 stock level: 0
+ ID 105: PS5 stock level: 0
+ ID 106: IPhone stock level: 0
+ ID 107: IPOD stock level: 0
+ ID 108: Acer PC stock level: 0
+ ID 109: Dell PC stock level: 0
+NOT FOUND
+
+ Kyle's Stock List
+ ====================
+
+ ID 100: Samsung Galaxy S9 stock level: 0
+ ID 101: PSP stock level: 10
+ ID 102: PS Vita stock level: 1
+ ID 103: Xbox stock level: 4
+ ID 104: PS3 stock level: 3
+ ID 105: PS5 stock level: 2
+ ID 106: IPhone stock level: 8
+ ID 107: IPOD stock level: 6
+ ID 108: Acer PC stock level: 7
+ ID 109: Dell PC stock level: 2
+Selling Stock
+
+Selling 1 101
+Selling Stock
+
+All stock is sold!!
+Selling 1 102
+Selling Stock
+
+Selling 1 103
+Selling Stock
+
+Selling 1 104
+Selling Stock
+
+Selling 1 105
+Selling Stock
+
+Selling 1 106
+Selling Stock
+
+Selling 1 107
+Selling Stock
+
+Selling 1 108
+Selling Stock
+
+Selling 1 109
+Product 110 Not found
+
+ Kyle's Stock List
+ ====================
+
+ ID 100: Samsung Galaxy S9 stock level: 0
+ ID 101: PSP stock level: 9
+ ID 102: PS Vita stock level: 0
+ ID 103: Xbox stock level: 3
+ ID 104: PS3 stock level: 2
+ ID 105: PS5 stock level: 1
+ ID 106: IPhone stock level: 7
+ ID 107: IPOD stock level: 5
+ ID 108: Acer PC stock level: 6
+ ID 109: Dell PC stock level: 1
+stockLis1.RemoveProduct(101);
+Product Is Removed
+stockLis1.search("PS");
+Product Not Found
+ ID 102: PS Vita stock level: 0
+Product Not Found
+ ID 104: PS3 stock level: 2
+ ID 105: PS5 stock level: 1
+Product Not Found
+Product Not Found
+Product Not Found
+Product Not Found
+stockLis1.LowStock();
+Products With Low Stock
+
+ ID 100: Samsung Galaxy S9 stock level: 0
+ ID 102: PS Vita stock level: 0
+ ID 104: PS3 stock level: 2
+ ID 105: PS5 stock level: 1
+ ID 109: Dell PC stock level: 1
