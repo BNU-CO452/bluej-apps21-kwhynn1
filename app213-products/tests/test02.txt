@@ -15,7 +15,7 @@ stockDem1.runDemo();
  ID 107: IPOD stock level: 0
  ID 108: Acer PC stock level: 0
  ID 109: Dell PC stock level: 0
-NOT FOUND
+ ID 110: Alienware PC stock level: 0
 
  Kyle's Stock List
  ====================
@@ -30,6 +30,7 @@ NOT FOUND
  ID 107: IPOD stock level: 6
  ID 108: Acer PC stock level: 7
  ID 109: Dell PC stock level: 2
+ ID 110: Alienware PC stock level: 1
 Selling Stock
 
 Selling 1 101
@@ -58,7 +59,10 @@ Selling 1 108
 Selling Stock
 
 Selling 1 109
-Product 110 Not found
+Selling Stock
+
+All stock is sold!!
+Selling 1 110
 
  Kyle's Stock List
  ====================
@@ -73,10 +77,12 @@ Product 110 Not found
  ID 107: IPOD stock level: 5
  ID 108: Acer PC stock level: 6
  ID 109: Dell PC stock level: 1
-stockLis1.RemoveProduct(101);
+ ID 110: Alienware PC stock level: 0
+stockLis1.RemoveProduct(110);
 Product Is Removed
 stockLis1.search("PS");
 Product Not Found
+ ID 101: PSP stock level: 9
  ID 102: PS Vita stock level: 0
 Product Not Found
  ID 104: PS3 stock level: 2
