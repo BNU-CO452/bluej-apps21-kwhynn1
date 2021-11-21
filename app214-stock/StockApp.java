@@ -4,28 +4,28 @@
  * stock manager so that users can add, edit,
  * print and remove stock products
  *
- * @author Student Name
- * @version 0.1
+ * @author Kyle Whynn
+ * @version 1
  */
 public class StockApp
 {
+    //Inputreader object
     private InputReader reader;
-    
-    //private ProductList stock;
+    //Stocklist object
+    private StockList stock;
     
     /**
-     * Constructor for objects of class StockApp
+     * Creates for objects for class StockApp
      */
     public StockApp()
     {
         reader = new InputReader();
-        
-        //stock = new ProductList();
-        //StockDemo demo = new StockDemo(stock);
+        stock = new StockList();
+        StockDemo demo = new StockDemo(stock);
     }
 
     /**
-     *  Display a list of menu choices and execute
+     *  Display a list of choices and runs
      *  the user's choice.
      */
     public void run()
@@ -43,6 +43,10 @@ public class StockApp
         }
     }
     
+    /**
+     * Runs the choice selected by the
+     * user
+     */
     private boolean executeChoice(String choice)
     {
         if(choice.equals("quit"))
@@ -51,14 +55,32 @@ public class StockApp
         }
         else if(choice.equals("print"))
         {
-            //stock.print();
+            stock.print();
+        }
+        else if(choice.equals("add"))
+        {
+            addProduct();
         }
         
         return false;
     }
    
     /**
-     * Print out a menu of operation choices
+     * Adds the product entered by the
+     * user to the stocklist
+     */
+    private void addProduct()
+    {
+        System.out.println("Add New Product");
+        System.out.println();  
+        int id = reader.getInt("Enter Product ID");
+        String name = reader.getString("Enter Product Name");
+        Product product = new Product (id, name);
+        stock.add(product);
+    }
+    
+    /**
+     * Prints the user choices 
      */
     private void printMenuChoices()
     {
@@ -71,13 +93,13 @@ public class StockApp
     }
     
     /**
-     * Print the title of the program and the authors name
+     * Print the program title and the author name
      */
     private void printHeading()
     {
         System.out.println("********************************");
         System.out.println("  App21-04: Stock Application ");
-        System.out.println("      by Student Name");
+        System.out.println("      by Kyle");
         System.out.println("********************************");
     }
 }

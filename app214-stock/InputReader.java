@@ -4,17 +4,16 @@ import java.util.Scanner;
  * InputReader reads typed text input from the standard text terminal. 
  * The text typed by a user is returned.
  * 
- * @author     Michael Kölling and David J. Barnes
- * @version    0.1 (2016.02.29)
- * 
- * Modified by Derek Peacock 13/12/2020
+ * @author     Kyle Whynn
+ * @version    1
  */
 public class InputReader
 {
+    //Scanner Object
     private Scanner reader;
 
     /**
-     * Create a new InputReader that reads text from the text terminal.
+     * Create a new InputReader that reads input from the terminal.
      */
     public InputReader()
     {
@@ -22,10 +21,8 @@ public class InputReader
     }
 
     /**
-     * Read a line of text from standard input (the text terminal),
-     * and return it as a String.
-     *
-     * @return  A String typed by the user.
+     * Read a line of text from the terminal
+     * and return it as a string.
      */
     public String getString(String prompt)
     {
@@ -34,7 +31,7 @@ public class InputReader
         
         while(!isValid)
         {
-            System.out.print(prompt);         // print prompt
+            System.out.print(prompt);       
             inputLine = reader.nextLine();
             
             if(!inputLine.isEmpty())
@@ -47,10 +44,8 @@ public class InputReader
     }
     
     /**
-     * Read a the next int from standard imput (the text terminal),
+     * Read a the int from terminal
      * and return it as an interger.
-     * 
-     * @return Integer typed by user.
      */
     public int getInt(String prompt)
     {
@@ -59,7 +54,7 @@ public class InputReader
         
         while(!isValid)
         {
-            System.out.println(prompt);         // print prompt
+            System.out.println(prompt);         
             number = reader.nextInt();
             
             if(number > 0)

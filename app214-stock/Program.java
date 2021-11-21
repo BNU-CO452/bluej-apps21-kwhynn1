@@ -1,14 +1,17 @@
 
 /**
- * Write a description of class Program here.
+ * This class is used to run the program
+ * with a user interface.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author  Kyle Whynn
+ * @version 1
  */
 public class Program
 {
+    //StockApp Object  
     private static StockApp app;
     
+    //Used to run the Stock progam
     public static void main(String[] args)
     {
         app = new StockApp();
