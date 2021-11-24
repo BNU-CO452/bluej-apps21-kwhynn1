@@ -1,0 +1,199 @@
+      by Kyle
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Low Stock:  Print Products with Low Stock
+    Restock:    Restock Products with Low Stock
+    Search:     Search For Products
+    Print:      Print all products
+    Buy:        Buy Stock products
+    Sell:      Sell Stock
+    Quit:       Quit the program
+
+Please enter your choice > 
+Your input is blank!
+
+Please enter your choice > print
+
+ Kyle's Stock List
+ ====================
+
+ ID 100: Samsung Galaxy S9 stock level: 2
+ ID 101: PSP stock level: 0
+ ID 102: PS Vita stock level: 0
+ ID 103: Xbox stock level: 0
+ ID 104: PS3 stock level: 0
+ ID 105: PS5 stock level: 0
+ ID 106: IPhone stock level: 0
+ ID 107: IPOD stock level: 0
+ ID 108: Acer PC stock level: 0
+ ID 109: Dell PC stock level: 0
+
+********************************
+  App21-04: Stock Application 
+      by Kyle
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Low Stock:  Print Products with Low Stock
+    Restock:    Restock Products with Low Stock
+    Search:     Search For Products
+    Print:      Print all products
+    Buy:        Buy Stock products
+    Sell:      Sell Stock
+    Quit:       Quit the program
+
+Please enter your choice > 
+********************************
+  App21-04: Stock Application 
+      by Kyle
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Low Stock:  Print Products with Low Stock
+    Restock:    Restock Products with Low Stock
+    Search:     Search For Products
+    Print:      Print all products
+    Buy:        Buy Stock products
+    Sell:      Sell Stock
+    Quit:       Quit the program
+
+Please enter your choice > print
+
+ Kyle's Stock List
+ ====================
+
+ ID 100: Samsung Galaxy S9 stock level: 0
+ ID 101: PSP stock level: 0
+ ID 102: PS Vita stock level: 0
+ ID 103: Xbox stock level: 0
+ ID 104: PS3 stock level: 0
+ ID 105: PS5 stock level: 0
+ ID 106: IPhone stock level: 0
+ ID 107: IPOD stock level: 0
+ ID 108: Acer PC stock level: 0
+ ID 109: Dell PC stock level: 0
+
+********************************
+  App21-04: Stock Application 
+      by Kyle
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Low Stock:  Print Products with Low Stock
+    Restock:    Restock Products with Low Stock
+    Search:     Search For Products
+    Print:      Print all products
+    Buy:        Buy Stock products
+    Sell:      Sell Stock
+    Quit:       Quit the program
+
+Please enter your choice > add
+Add New Product
+
+Enter Product ID
+110
+Enter Product Name
+Your input is blank!
+
+Enter Product NamePS6
+
+********************************
+  App21-04: Stock Application 
+      by Kyle
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Low Stock:  Print Products with Low Stock
+    Restock:    Restock Products with Low Stock
+    Search:     Search For Products
+    Print:      Print all products
+    Buy:        Buy Stock products
+    Sell:      Sell Stock
+    Quit:       Quit the program
+
+Please enter your choice > add
+Add New Product
+
+Enter Product ID
+100
+Enter Product Name
+Your input is blank!
+
+Enter Product NameIphone
+
+The ID is already in The System
+
+********************************
+  App21-04: Stock Application 
+      by Kyle
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Low Stock:  Print Products with Low Stock
+    Restock:    Restock Products with Low Stock
+    Search:     Search For Products
+    Print:      Print all products
+    Buy:        Buy Stock products
+    Sell:      Sell Stock
+    Quit:       Quit the program
+
+Please enter your choice > remove
+Remove ID
+
+Enter Product ID
+100
+
+Product Is Removed
+The Product is removed from the System
+
+********************************
+  App21-04: Stock Application 
+      by Kyle
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Low Stock:  Print Products with Low Stock
+    Restock:    Restock Products with Low Stock
+    Search:     Search For Products
+    Print:      Print all products
+    Buy:        Buy Stock products
+    Sell:      Sell Stock
+    Quit:       Quit the program
+
+Please enter your choice > 
+Your input is blank!
+
+Please enter your choice > remove
+Remove ID
+
+Enter Product ID
+112
+The Product is not in the System 
+
+********************************
+  App21-04: Stock Application 
+      by Kyle
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Low Stock:  Print Products with Low Stock
+    Restock:    Restock Products with Low Stock
+    Search:     Search For Products
+    Print:      Print all products
+    Buy:        Buy Stock products
+    Sell:      Sell Stock
+    Quit:       Quit the program
+
+Please enter your choice > 
+Your input is blank!
+
+Please enter your choice > quit

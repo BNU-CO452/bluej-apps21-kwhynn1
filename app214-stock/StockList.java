@@ -12,7 +12,7 @@ public class StockList
     private ArrayList<Product> stock;
 
     /**
-     * Create stock list.
+     * Create stock list for products.
      */
     public StockList()
     {
@@ -23,12 +23,12 @@ public class StockList
      * Adds items to stocklist
      */
     public void add(Product item)
-    {
-        stock.add(item);
+    {   
+            stock.add(item);   
     }
      
     /**
-     * Increases stock quantity
+     * Increases stock quantity for products
      */
     public void buyProduct(int productID, int amount)
     {
@@ -45,7 +45,7 @@ public class StockList
     }
     
     /**
-     * Serach for product with id.
+     * Search for product using product id and return product object.
      */
     public Product findProduct(int productID)
     {
@@ -62,7 +62,29 @@ public class StockList
     }
     
     /**
-     * Decreases stock quanitiy
+     * Search for product using product id and return product id.
+     */
+    public int findProductID(int productID)
+    {
+        int find=0;
+        
+        for(Product product : stock)
+        {
+            if(product.getID() == productID)
+            {
+               find = product.getID();
+            }
+            else
+            {
+               find=find;
+            }
+        }
+          
+         return find;
+    }
+    
+    /**
+     * Decreases stock quanitiy for a product
      */
     public void sellProduct(int productID, int sellQuantity)
      {
@@ -114,6 +136,27 @@ public class StockList
     }
     
     /**
+     * Buys 4 Stock for products with low stock (lower than 3) 
+     */
+    public void reStock()
+    {
+        System.out.println("");
+        int restock = 4;
+        for(Product product : stock)
+        {
+            if(product.getQuantity() < 3 )
+            {
+              product.increaseQuantity(restock);
+              System.out.println("Product is reStock");
+            } 
+            else
+            {
+             System.out.println("Product has enough Stock");
+            }
+        }
+    }
+    
+    /**
      * Allows user to search for
      * product by name
      */
@@ -153,7 +196,7 @@ public class StockList
     }
     
     /**
-     * prints product information
+     * prints stock list with products
      */
     public void printProduct(int productID)
     {
