@@ -1,34 +1,5 @@
-      by Kyle
-********************************
-
-    Add:        Add a new product
-    Remove:     Remove an old product
-    Low Stock:  Print Products with Low Stock
-    Restock:    Restock Products with Low Stock
-    Search:     Search For Products
-    Print:      Print all products
-    Buy:        Buy Stock products
-    Sell:      Sell Stock
-    Quit:       Quit the program
-
-Please enter your choice > 
-Your input is blank!
-
-Please enter your choice > print
-
- Kyle's Stock List
- ====================
-
- ID 100: Samsung Galaxy S9 stock level: 2
- ID 101: PSP stock level: 0
- ID 102: PS Vita stock level: 0
- ID 103: Xbox stock level: 0
- ID 104: PS3 stock level: 0
- ID 105: PS5 stock level: 0
- ID 106: IPhone stock level: 0
- ID 107: IPOD stock level: 0
- ID 108: Acer PC stock level: 0
- ID 109: Dell PC stock level: 0
+     VM terminated.
+Program.main({ });
 
 ********************************
   App21-04: Stock Application 
@@ -42,23 +13,7 @@ Please enter your choice > print
     Search:     Search For Products
     Print:      Print all products
     Buy:        Buy Stock products
-    Sell:      Sell Stock
-    Quit:       Quit the program
-
-Please enter your choice > 
-********************************
-  App21-04: Stock Application 
-      by Kyle
-********************************
-
-    Add:        Add a new product
-    Remove:     Remove an old product
-    Low Stock:  Print Products with Low Stock
-    Restock:    Restock Products with Low Stock
-    Search:     Search For Products
-    Print:      Print all products
-    Buy:        Buy Stock products
-    Sell:      Sell Stock
+    Sell:       Sell Stock
     Quit:       Quit the program
 
 Please enter your choice > print
@@ -89,7 +44,7 @@ Please enter your choice > print
     Search:     Search For Products
     Print:      Print all products
     Buy:        Buy Stock products
-    Sell:      Sell Stock
+    Sell:       Sell Stock
     Quit:       Quit the program
 
 Please enter your choice > add
@@ -100,7 +55,7 @@ Enter Product ID
 Enter Product Name
 Your input is blank!
 
-Enter Product NamePS6
+Enter Product NameLaptop
 
 ********************************
   App21-04: Stock Application 
@@ -114,7 +69,7 @@ Enter Product NamePS6
     Search:     Search For Products
     Print:      Print all products
     Buy:        Buy Stock products
-    Sell:      Sell Stock
+    Sell:       Sell Stock
     Quit:       Quit the program
 
 Please enter your choice > add
@@ -125,7 +80,7 @@ Enter Product ID
 Enter Product Name
 Your input is blank!
 
-Enter Product NameIphone
+Enter Product Namewe
 
 The ID is already in The System
 
@@ -141,7 +96,7 @@ The ID is already in The System
     Search:     Search For Products
     Print:      Print all products
     Buy:        Buy Stock products
-    Sell:      Sell Stock
+    Sell:       Sell Stock
     Quit:       Quit the program
 
 Please enter your choice > remove
@@ -165,7 +120,7 @@ The Product is removed from the System
     Search:     Search For Products
     Print:      Print all products
     Buy:        Buy Stock products
-    Sell:      Sell Stock
+    Sell:       Sell Stock
     Quit:       Quit the program
 
 Please enter your choice > 
@@ -175,7 +130,7 @@ Please enter your choice > remove
 Remove ID
 
 Enter Product ID
-112
+1111
 The Product is not in the System 
 
 ********************************
@@ -190,7 +145,35 @@ The Product is not in the System
     Search:     Search For Products
     Print:      Print all products
     Buy:        Buy Stock products
-    Sell:      Sell Stock
+    Sell:       Sell Stock
+    Quit:       Quit the program
+
+Please enter your choice > 
+Your input is blank!
+
+Please enter your choice > buy
+Buy New Product
+
+Enter Product ID
+101
+Enter Amount
+4
+
+The Stock has been bought
+
+********************************
+  App21-04: Stock Application 
+      by Kyle
+********************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Low Stock:  Print Products with Low Stock
+    Restock:    Restock Products with Low Stock
+    Search:     Search For Products
+    Print:      Print all products
+    Buy:        Buy Stock products
+    Sell:       Sell Stock
     Quit:       Quit the program
 
 Please enter your choice > 
