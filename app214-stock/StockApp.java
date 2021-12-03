@@ -98,8 +98,8 @@ public class StockApp
     {
         System.out.println("Buy New Product");
         System.out.println();  
-        int id = reader.getInt("Enter Product ID");
-        int amount = reader.getInt("Enter Amount");
+        int id = reader.getInt("Enter Product ID ");
+        int amount = reader.getInt("Enter Amount ");
          if (stock.findProductID(id) == id )
         {
             System.out.println(""); 
@@ -120,7 +120,7 @@ public class StockApp
     {
         System.out.println("Sell Product");
         System.out.println();  
-        int id = reader.getInt("Enter Product ID");
+        int id = reader.getInt("Enter Product ID ");
         int amount = reader.getInt("Enter Amount to be Sold");
          if (stock.findProductID(id) == id )
         {
@@ -144,8 +144,8 @@ public class StockApp
     {
         System.out.println("Add New Product");
         System.out.println();  
-        int id = reader.getInt("Enter Product ID");
-        String name = reader.getString("Enter Product Name");
+        int id = reader.getInt("Enter Product ID ");
+        String name = reader.getString("Enter Product Name ");
         Product product = new Product (id, name);
         if (stock.findProductID(id) == id )
         {
@@ -163,9 +163,10 @@ public class StockApp
      */
     private void search()
     {
-        System.out.println("Search Products");
+        System.out.println("");
+        System.out.println("Search Products ");
         System.out.println();  
-        String name = reader.getString("Enter Product Name");
+        String name = reader.getString("Enter Product Name ");
         stock.search(name);
     }
     
@@ -176,7 +177,7 @@ public class StockApp
     {
         System.out.println("Remove ID");
         System.out.println();  
-        int id = reader.getInt("Enter Product ID");
+        int id = reader.getInt("Enter Product ID ");
         if (stock.findProductID(id) == id )
         {
             System.out.println(""); 

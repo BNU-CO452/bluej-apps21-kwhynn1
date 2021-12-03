@@ -44,7 +44,7 @@ public class InputReader
     }
     
     /**
-     * Read a the int from terminal
+     * Read an int from terminal
      * and return it as an interger.
      */
     public int getInt(String prompt)

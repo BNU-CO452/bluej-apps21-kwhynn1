@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class StockList
 {
-    // Prodcut object
+    // Product object
     private ArrayList<Product> stock;
 
     /**
@@ -84,7 +84,7 @@ public class StockList
     }
     
     /**
-     * Decreases stock quanitiy for a product
+     * Decreases stock quantity for a product
      */
     public void sellProduct(int productID, int sellQuantity)
      {
@@ -128,7 +128,7 @@ public class StockList
         
         for(Product product : stock)
         {
-            if(product.getQuantity() < 3 )
+            if(product.getQuantity() < 1 )
             {
                  System.out.println(product);
             }
@@ -141,13 +141,14 @@ public class StockList
     public void reStock()
     {
         System.out.println("");
-        int restock = 4;
+        int restock = 1;
         for(Product product : stock)
         {
-            if(product.getQuantity() < 3 )
+            if(product.getQuantity() < 1 )
             {
               product.increaseQuantity(restock);
-              System.out.println("Product is reStock");
+              System.out.println(product.toString());
+              System.out.println("Product is reStocked");
             } 
             else
             {

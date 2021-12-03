@@ -8,7 +8,7 @@ public class Product
 {
     // product id
     private int id;
-    // name of prroduct
+    // name of product
     private String name;
     // quantity of product
     private int quantity;
@@ -56,7 +56,7 @@ public class Product
     }
     
     /**
-     * adds new stock to old stoch quantity
+     * adds new stock to old stock quantity
      */
     public void increaseQuantity(int amount)
     {
