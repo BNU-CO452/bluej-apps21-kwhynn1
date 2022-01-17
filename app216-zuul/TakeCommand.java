@@ -8,7 +8,7 @@
  * @author Derek Peacock & Nicholas Day
  * @version 2021-08-23
  */
-public class TakeCommand extends ZuulCommand
+public class TakeCommand extends Command
 {
     String item;
     
@@ -31,7 +31,7 @@ public class TakeCommand extends ZuulCommand
             return;
         }
 
-        Map map = zuul.MAP;
+        Map map = sk.MAP;
         // remove the item from the current room
         // and add it to the player's inventory
         // Print out a suitable message.

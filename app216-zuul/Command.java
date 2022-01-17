@@ -19,17 +19,17 @@
  * Derek Peacock & Nicholas Day
  * @version 2021-08-23
  */
-public abstract class ZuulCommand
+public abstract class Command
 {
-    protected Game zuul;
+    protected Game sk;
     protected String secondWord;
 
     /**
      * Constructor for objects of class ZuulCommand
      */
-    public ZuulCommand(Game game)
+    public Command(Game game)
     {
-        zuul = game;
+        sk = game;
     }
 
     public abstract void execute();

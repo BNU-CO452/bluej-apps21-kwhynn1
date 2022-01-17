@@ -1,29 +1,20 @@
-/**
- *  This class is the main class of the "World of Zuul" application. 
- *  "World of Zuul" is a very simple, text based adventure game.  Users 
- *  can walk around some scenery. That's all. It should really be extended 
- *  to make it more interesting!
+/*
  * 
- *  To play this game, create an instance of this class and call the "play"
- *  method.
+ * This is the main class for the game. The game is run in a loop using a boolean value.
  * 
- *  This main class creates and initialises all the others: it creates all
- *  locations, creates the CommandReader and starts the game.  
- * 
- * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
- * 
- * Modified and extended by Student Name
  */
 
 public class Game 
 {
+    //Constant For Map boject
     public final Map MAP;
+    //variable for input
     private CommandReader reader;
+    //varibale used for game loop
     private boolean gameOver;
         
     /**
-     * Create the game and initialise its internal map.
+     * Starts the game and creates a new map/
      */
     public Game() 
     {
@@ -32,15 +23,12 @@ public class Game
     }
 
     /**
-     *  Main play routine.  Loops until end of play.
+     *  Runs game until boolean value is true.
      */
     public void play() 
     {            
-        printWelcome();
+        Message();
         gameOver = false;
-
-        // Enter the main command loop.  Here we repeatedly 
-        // read commands and execute them until the game is over.
                 
         while (! gameOver) 
         {
@@ -53,11 +41,10 @@ public class Game
     /**
      * Print out the opening message for the player.
      */
-    private void printWelcome()
+    private void Message()
     {
         System.out.println();
-        System.out.println(" Welcome to the World of Zuul!");
-        System.out.println(" World of Zuul is a new, incredibly boring adventure game.");
+        System.out.println(" You're a Janitor and Zombies have infested your school. Git rid of dem before school sarts!");
         System.out.println(" Type 'help' if you need help.");
         System.out.println();
         System.out.println(MAP.getCurrentLocation().getLongDescription());

@@ -1,21 +1,8 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 /**
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.  
- * 
- * This parser reads user input and tries to interpret it as an "Adventure"
- * command. Every time it is called it reads a line from the terminal and
- * tries to interpret the line as a two-word command. It returns the command
- * as an object of class Command.
- *
- * The reader has a set of known command words. It checks user input against
- * the known commands, and if the input is not one of the known commands, it
- * returns a command object that is marked as an unknown command.
- * 
- * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
- */
+*
+*/
 public class CommandReader 
 {
     private Game game;
@@ -80,6 +67,12 @@ public class CommandReader
         else if(commandWord.equals(CommandWords.QUIT.word))
         {
             return true;  // game over
+        }
+        else if(commandWord.equals(CommandWords.MAP.word))
+        {
+           MapCommand map = new MapCommand (game);
+           map.execute();
+            
         }
 
         // Return false means the game is not over

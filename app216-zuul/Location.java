@@ -3,24 +3,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 /**
- * Class Location - a location on the map of an adventure game.
- *
- * This class is part of the "World of Zuul" application. 
- * "World of Zuul" is a very simple, text based adventure game.  
- *
- * A "Location" represents one place in the scenery of the game.  It is 
- * connected to other locations via exits.  For each existing exit, the 
- * location stores a reference to the neighboring locations.
  * 
- * @author  Michael Kölling and David J. Barnes
- * Modified by Derek Peacock & Nicholas Day
- * @version 2016.02.29
  */
 
 public class Location 
 {
     private String description;
-    private HashMap<String, Location> exits;        // stores exits of this room.
+    private HashMap <String, Location> location;        
 
     /**
      * Create a location described "description". Initially, it has
@@ -30,7 +19,7 @@ public class Location
     public Location(String description) 
     {
         this.description = description;
-        exits = new HashMap<>();
+        location = new HashMap<>();
     }
 
     /**
@@ -38,9 +27,9 @@ public class Location
      * @param direction The direction of the exit.
      * @param neighbor  The room to which the exit leads.
      */
-    public void setExit(String direction, Location neighbor) 
+    public void setDirection(String direction, Location neighbor) 
     {
-        exits.put(direction, neighbor);
+        location.put(direction, neighbor);
     }
 
     /**
@@ -69,8 +58,8 @@ public class Location
      */
     private String getExitString()
     {
-        String returnString = " Exits:";
-        Set<String> keys = exits.keySet();
+        String returnString = " Directions:";
+        Set<String> keys = location.keySet();
         
         for(String exit : keys) 
         {
@@ -87,7 +76,7 @@ public class Location
      */
     public Location getExit(String direction) 
     {
-        return exits.get(direction);
+        return location.get(direction);
     }
 }
 

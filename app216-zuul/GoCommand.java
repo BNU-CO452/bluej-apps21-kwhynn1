@@ -7,13 +7,13 @@
  * @author Derek Peacock & Nicholas Day
  * @version 2021-08-23
  */
-public class GoCommand extends ZuulCommand
+public class GoCommand extends Command
 {
     String direction;
     
-    public GoCommand(Game zuul, String direction)
+    public GoCommand(Game game, String direction)
     {
-        super(zuul);
+        super(game);
         this.direction = direction;
     }    
 
@@ -26,7 +26,7 @@ public class GoCommand extends ZuulCommand
             return;
         }
 
-        Map map = zuul.MAP;
+        Map map = sk.MAP;
         
         // Try to leave current room.
         Location currentLocation = map.getCurrentLocation();

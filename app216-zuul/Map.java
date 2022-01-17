@@ -1,26 +1,17 @@
 
 /**
- * This class is reponsible for creating and
- * linking all the Locations in the game to
- * form a 2D or 3D network
- *
- *  [Pub]<---->[Outside]<---->[Theatre]
- *                 |
- *          [Computer Lab]<---->[Office]
- *             
- * @author Derek Peacock and Nicholas Day
- * @version 2021-08-22
+ * 
  */
 public class Map
 {
-    // Need to add a list of exits
+    // variables for locations
+    private Location caterteria, library, entrance, reception, hallway, admin, gym, classroom ;
     
-    private Location outside, theater, pub, lab, office;
-
+    //variable for current location
     private Location currentLocation;
 
     /**
-     * Constructor for objects of class Map
+     * Creates map for game
      */
     public Map()
     {
@@ -28,83 +19,115 @@ public class Map
     }
 
     /**
-     * Create all the Locations and link their exits together.
-     * Set the current location to the outside.
-     * Both locations need to have been created before
-     * their exists are linked.
+     * Creates locations for game
      */
     private void createLocations()
     {
-        createOutside();
-        createTheatre();
-        createPub();
-        createOffice();
-        createLab();
+        entrance();
+        reception();
+        admin(); 
+        hallway();
+        gym();
+        library();
+        classroom();
+        caterteria();
+        currentLocation = entrance;  // starts the player at the entrance
+    }
+    
+    /**
+     * Creates entrance location
+     */
+    private void entrance()
+    {
+        entrance = new Location("You are at the Entrance of the school");
+        
+    }
+        
+    /**
+     * Creates library location
+     */
+    private void library()
+    {
+        library = new Location("Inside the school's library");
+        entrance.setDirection("west",library);
+        library.setDirection("east",entrance);
+    }
+    
+    /**
+     * Creates reception location
+     */
+    private void reception()
+    {
+        reception = new Location("Inside the Reception area");
+           
+        reception.setDirection("north",entrance);
+        entrance.setDirection("south",reception); 
+    }
+    
+    /**
+     * Creates admin location 
+     */
+    private void admin()
+    {
+        admin = new Location("Inside the Admin area");
 
-        currentLocation = outside;  // start game outside
+        reception.setDirection("east",admin);
+        admin.setDirection("west",reception);
     }
     
     /**
-     * Create the outside and link it to the
-     * theatre, lab and pub
+     * Creates hallway location 
      */
-    private void createOutside()
+    private void hallway()
     {
-        outside = new Location("outside the main entrance of the university");
-        
+        hallway = new Location("Inside the school's hallway");
+
+        reception.setDirection("south",hallway);
     }
     
     /**
-     * Create the pub and link it to the outside
+     * Creates gym location
      */
-    private void createPub()
+    private void gym()
     {
-        pub = new Location("in the campus pub");
+        gym = new Location("Inside the school's Gym");
         
-        pub.setExit("east", outside);
-        outside.setExit("west", pub);
+        hallway.setDirection("east",gym);
+        gym.setDirection("west",hallway);
     }
     
     /**
-     * Create the theatre linked to the outside
+     * Creates classroom location
      */
-    private void createTheatre()
+    private void classroom()
     {
-        theater = new Location("in a lecture theater");
+        classroom = new Location("Inside the Classroom");
         
-        theater.setExit("west", outside);
-        outside.setExit("east", theater);
+        gym.setDirection("south",classroom);
     }
     
     /**
-     * Create the office linked to the lab
+     * Creates caterteria location
      */
-    private void createOffice()
+    private void  caterteria()
     {
-        office = new Location("in the computing admin office");
+        caterteria = new Location("Inside the school's caterteria");
         
+        caterteria.setDirection("north",entrance);
+        classroom.setDirection("south",caterteria);
     }
     
     /**
-     * Create the lab and link it to the outside and office
+     * The current location of the player
      */
-    private void createLab()
-    {
-        // create the Locations
-        lab = new Location("in a computing lab");
-        
-        lab.setExit("east", office);
-        office.setExit("west", lab);
-        
-        lab.setExit("north", outside);
-        outside.setExit("south", lab);
-    }
-    
     public Location getCurrentLocation()
     {
         return currentLocation;
     }
     
+    /**
+     * Allows the player to change locations
+     */
     public void enterLocation(Location nextLocation)
     {
         currentLocation = nextLocation;

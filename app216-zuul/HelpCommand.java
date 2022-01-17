@@ -5,11 +5,11 @@ import java.util.ArrayList;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class HelpCommand extends ZuulCommand
+public class HelpCommand extends Command
 {
-    public HelpCommand(Game zuul)
+    public HelpCommand(Game game)
     {
-        super(zuul);
+        super(game);
     }
 
     /**
@@ -19,8 +19,6 @@ public class HelpCommand extends ZuulCommand
      */
     public void execute()
     {
-        System.out.println(" You are lost. You are alone. You wander");
-        System.out.println(" around at the university.");        
         System.out.println();
         System.out.println(" Your command words are:");
         System.out.println();
@@ -31,8 +29,7 @@ public class HelpCommand extends ZuulCommand
                                "\t  : " + command.description);                        
         }   
         System.out.println();
-        System.out.println(" e.g. go west, take gold");
         System.out.println();
-        System.out.println(zuul.MAP.getCurrentLocation().getLongDescription());
+        System.out.println(sk.MAP.getCurrentLocation().getLongDescription());
     }
 }
