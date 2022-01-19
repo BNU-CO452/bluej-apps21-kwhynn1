@@ -1,13 +1,4 @@
 
-/**
- * This command allows the player to
- * take or pickup an item from a room
- * and carry it around to use somewhere
- * else
- *
- * @author Derek Peacock & Nicholas Day
- * @version 2021-08-23
- */
 public class TakeCommand extends Command
 {
     String item;

@@ -9,6 +9,9 @@ public class Map
     
     //variable for current location
     private Location currentLocation;
+   
+    public Item item;
+ 
 
     /**
      * Creates map for game
@@ -50,7 +53,12 @@ public class Map
     {
         library = new Location("Inside the school's library");
         entrance.setDirection("west",library);
-        library.setDirection("east",entrance);
+        library.setDirection("east",entrance); 
+        
+        Item book = new Item ("Book", "attack",10);
+        addItem(book);
+        if (item != null) {
+        System.out.println("The Item In the Room is " + book.getName());}   
     }
     
     /**
@@ -59,7 +67,6 @@ public class Map
     private void reception()
     {
         reception = new Location("Inside the Reception area");
-           
         reception.setDirection("north",entrance);
         entrance.setDirection("south",reception); 
     }
@@ -70,9 +77,9 @@ public class Map
     private void admin()
     {
         admin = new Location("Inside the Admin area");
-
         reception.setDirection("east",admin);
         admin.setDirection("west",reception);
+        
     }
     
     /**
@@ -81,7 +88,6 @@ public class Map
     private void hallway()
     {
         hallway = new Location("Inside the school's hallway");
-
         reception.setDirection("south",hallway);
     }
     
@@ -91,7 +97,6 @@ public class Map
     private void gym()
     {
         gym = new Location("Inside the school's Gym");
-        
         hallway.setDirection("east",gym);
         gym.setDirection("west",hallway);
     }
@@ -102,7 +107,6 @@ public class Map
     private void classroom()
     {
         classroom = new Location("Inside the Classroom");
-        
         gym.setDirection("south",classroom);
     }
     
@@ -112,7 +116,7 @@ public class Map
     private void  caterteria()
     {
         caterteria = new Location("Inside the school's caterteria");
-        
+        item = new Item ("Lunch", "heatlh",50);
         caterteria.setDirection("north",entrance);
         classroom.setDirection("south",caterteria);
     }
@@ -132,4 +136,10 @@ public class Map
     {
         currentLocation = nextLocation;
     }
+    
+    public void addItem (Item item)
+    {
+        this.item = item;
+    }
+    
 }

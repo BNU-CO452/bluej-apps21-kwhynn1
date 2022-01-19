@@ -1,27 +1,21 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-/**
-*
-*/
+
 public class CommandReader 
 {
     private Game game;
-    private Scanner reader; // source of command input
+    private Scanner reader; 
 
     private String commandWord = null;
     private String word2 = null;
-    /**
-     * Create a parser to read from the terminal window.
-     */
+   
     public CommandReader(Game game) 
     {
         this.game = game;
         reader = new Scanner(System.in);
     }
     
-    /**
-     * @return The next command from the user.
-     */
+    
     public boolean getCommand() 
     {
         String inputLine;  
@@ -29,17 +23,16 @@ public class CommandReader
         System.out.print(" > ");
         inputLine = reader.nextLine().toLowerCase();
 
-        // Find up to two words on the line.
+        
         Scanner tokenizer = new Scanner(inputLine);
         
         if(tokenizer.hasNext()) 
         {
-            commandWord = tokenizer.next();      // get first word
+            commandWord = tokenizer.next();      
         
             if(tokenizer.hasNext()) 
             {
-                word2 = tokenizer.next();      // get second word
-                // note: we just ignore the rest of the input line.
+                word2 = tokenizer.next();      
             }
             else word2 = null;
         }
@@ -66,7 +59,7 @@ public class CommandReader
         }
         else if(commandWord.equals(CommandWords.QUIT.word))
         {
-            return true;  // game over
+            return true;  
         }
         else if(commandWord.equals(CommandWords.MAP.word))
         {
@@ -74,8 +67,14 @@ public class CommandReader
            map.execute();
             
         }
+        else if(commandWord.equals(CommandWords.STATS.word))
+        {
+           PlayerStatsCommand stats = new PlayerStatsCommand (game);
+           stats.execute();
+        }
+       
 
-        // Return false means the game is not over
+        
         return false;
     }
 }

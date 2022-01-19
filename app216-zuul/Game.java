@@ -1,8 +1,5 @@
-/*
- * 
- * This is the main class for the game. The game is run in a loop using a boolean value.
- * 
- */
+import java.util.Scanner;
+
 
 public class Game 
 {
@@ -12,6 +9,7 @@ public class Game
     private CommandReader reader;
     //varibale used for game loop
     private boolean gameOver;
+    private Player player;
         
     /**
      * Starts the game and creates a new map/
@@ -20,6 +18,7 @@ public class Game
     {
         MAP = new Map();
         reader = new CommandReader(this);
+        player = new Player();
     }
 
     /**
@@ -27,9 +26,10 @@ public class Game
      */
     public void play() 
     {            
+            
         Message();
         gameOver = false;
-                
+        
         while (! gameOver) 
         {
             gameOver = reader.getCommand();
@@ -44,9 +44,16 @@ public class Game
     private void Message()
     {
         System.out.println();
-        System.out.println(" You're a Janitor and Zombies have infested your school. Git rid of dem before school sarts!");
+        System.out.println("You're a Janitor and Zombies have infested your school. Git rid of dem before school starts!");
         System.out.println(" Type 'help' if you need help.");
         System.out.println();
-        System.out.println(MAP.getCurrentLocation().getLongDescription());
+        System.out.println(MAP.getCurrentLocation().getLongDescription());  
     }
-}
+    
+    
+    }
+
+
+    
+    
+
