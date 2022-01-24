@@ -5,6 +5,8 @@ public class Item
     private int value;
     private String name;
     private String type;
+    private Location location;
+    
 
     /**
      * Constructor for objects of class Item
@@ -16,16 +18,18 @@ public class Item
          this.value = value;
     }
 
-    public int getValue ()
+     public  int getValue ()
     {
         return value;
     }
     
-    public String getName (){
+     public  String getName ()
+    {
         return name;
     }
     
-    public String getType (){
+    public  String getType ()
+    {
         return type;
     }
 }

@@ -20,7 +20,7 @@ public class Location
         location.put(direction, neighbor);
     }
 
-
+    
     public String getShortDescription()
     {
         return description;
@@ -50,7 +50,7 @@ public class Location
     {
         return location.get(direction);
     }
-    
+
      
 }
 

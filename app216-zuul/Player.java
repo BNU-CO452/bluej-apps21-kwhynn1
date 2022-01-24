@@ -15,32 +15,36 @@ public class Player
 
    public int getHealth()
    {
-       int health = 100;
        return health;
    }
    
    public int getDamage()
    {
-       int damage = 5;
        return damage;
    }
    
    public int getScore()
    {
-       int score = 0;
        return score;
    }
    
-   public void increaseHealth (int amount) {    
+   public void increaseHealth (int amount) 
+   {    
     health = getHealth() + amount;
-    }
+   }
    
-   public void decearseHealth (int amount) {    
+   public void decearseHealth (int amount) 
+   {    
     health = getHealth() - amount;
    }
    
-   public void increaseScore (int amount) {    
-    health = getScore() + amount;
-    }
+   public void increaseScore (int amount) 
+   {    
+    score = getScore() + amount;
+   }
    
+   public void increaseDamage (int amount) 
+   {    
+    damage = getDamage() + amount;
+   }
 }

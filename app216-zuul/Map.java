@@ -9,10 +9,15 @@ public class Map
     
     //variable for current location
     private Location currentLocation;
-   
-    public Item item;
  
-
+    private Game game;
+    
+    private Item item;
+    
+    private Enemy enemy;
+    
+    
+    
     /**
      * Creates map for game
      */
@@ -26,45 +31,40 @@ public class Map
      */
     private void createLocations()
     {
-        entrance();
-        reception();
-        admin(); 
-        hallway();
-        gym();
-        library();
-        classroom();
-        caterteria();
-        currentLocation = entrance;  // starts the player at the entrance
+        createEntrance();
+        createReception();
+        createAdmin(); 
+        createHallway();
+        createGym();
+        createLibrary();
+        createClassroom();
+        createCaterteria();
+        
     }
     
     /**
      * Creates entrance location
      */
-    private void entrance()
+    private void createEntrance()
     {
-        entrance = new Location("You are at the Entrance of the school");
-        
+        entrance = new Location("You are at the Entrance of the school");  
+        currentLocation = entrance; 
     }
         
     /**
      * Creates library location
      */
-    private void library()
+   public void createLibrary()
     {
         library = new Location("Inside the school's library");
         entrance.setDirection("west",library);
-        library.setDirection("east",entrance); 
-        
-        Item book = new Item ("Book", "attack",10);
-        addItem(book);
-        if (item != null) {
-        System.out.println("The Item In the Room is " + book.getName());}   
+        library.setDirection("east",entrance);
     }
     
     /**
      * Creates reception location
      */
-    private void reception()
+    private void createReception()
     {
         reception = new Location("Inside the Reception area");
         reception.setDirection("north",entrance);
@@ -74,18 +74,18 @@ public class Map
     /**
      * Creates admin location 
      */
-    private void admin()
+    private void createAdmin()
+    
     {
         admin = new Location("Inside the Admin area");
         reception.setDirection("east",admin);
         admin.setDirection("west",reception);
-        
     }
     
     /**
      * Creates hallway location 
      */
-    private void hallway()
+    private void createHallway()
     {
         hallway = new Location("Inside the school's hallway");
         reception.setDirection("south",hallway);
@@ -94,7 +94,7 @@ public class Map
     /**
      * Creates gym location
      */
-    private void gym()
+    private void createGym()
     {
         gym = new Location("Inside the school's Gym");
         hallway.setDirection("east",gym);
@@ -104,7 +104,7 @@ public class Map
     /**
      * Creates classroom location
      */
-    private void classroom()
+    private void createClassroom()
     {
         classroom = new Location("Inside the Classroom");
         gym.setDirection("south",classroom);
@@ -113,10 +113,9 @@ public class Map
     /**
      * Creates caterteria location
      */
-    private void  caterteria()
+    private void  createCaterteria()
     {
         caterteria = new Location("Inside the school's caterteria");
-        item = new Item ("Lunch", "heatlh",50);
         caterteria.setDirection("north",entrance);
         classroom.setDirection("south",caterteria);
     }
@@ -137,9 +136,21 @@ public class Map
         currentLocation = nextLocation;
     }
     
-    public void addItem (Item item)
+    public  void addItem (Item item)
     {
         this.item = item;
     }
+    
+    public Item getItem()
+    {
+    return item;
+    }
+    
+    public  void addEnemy (Enemy enemy)
+    {
+        this.enemy = enemy;
+    }
+    
+    
     
 }

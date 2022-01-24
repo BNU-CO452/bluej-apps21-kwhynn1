@@ -46,11 +46,6 @@ public class CommandReader
         {
             GoCommand go = new GoCommand(game, word2);
             go.execute();
-        }
-        else if(commandWord.equals(CommandWords.TAKE.word))
-        {
-            TakeCommand take = new TakeCommand(game, word2);
-            take.execute();
         }        
         else if(commandWord.equals(CommandWords.HELP.word))
         {

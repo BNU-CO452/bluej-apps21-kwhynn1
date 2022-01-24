@@ -29,7 +29,7 @@ public class MapCommand extends Command
         System.out.println("                    |    ");
         System.out.println("               [Reception]<---->[Admin]");
         System.out.println("                    |    ");
-        System.out.println("               [Hallways]<---->[Gym]");
+        System.out.println("               [Hallways]---->[Gym]");
         System.out.println("                                 |     ");
         System.out.println("                            [Classroom]");
         System.out.println("                                 |     ");

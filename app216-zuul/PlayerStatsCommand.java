@@ -1,6 +1,8 @@
 
 public class PlayerStatsCommand extends Command
 {
+    public Game game;
+    private GoCommand go;
     private Player player;
     
     public PlayerStatsCommand(Game game)
@@ -10,7 +12,7 @@ public class PlayerStatsCommand extends Command
 
     public void execute()
     {
-        player = new Player();
+        Player player = sk.player;
         System.out.println();
         System.out.println("Player's Health " + player.getHealth());
         System.out.println("Player's score " + player.getScore());
