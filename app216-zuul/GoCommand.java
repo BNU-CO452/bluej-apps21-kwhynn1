@@ -127,18 +127,16 @@ public class GoCommand extends Command
                 
             if (player.getHealth() <= 50)
             {
-            
                 System.out.println(" " + item.getType() + " increased by "+ item .getValue() + " using " + item .getName());
                 player.increaseHealth(itemvalue);
                 item = null;
                 System.out.println(); 
                 System.out.println(map.getCurrentLocation().getLongDescription());  
-                
             } 
             
             else
             {
-          
+    
             System.out.println(" Sorry, you can't use this item");
             System.out.println(); 
             System.out.println(map.getCurrentLocation().getLongDescription());  
@@ -179,9 +177,9 @@ public class GoCommand extends Command
             if (ans.equals("y"))
             {   
                 enemy.decearseHealth(Pdamage);
-                System.out.println(" Player Has Attacked the Zombie! " + player.getDamage() + " was done to the Zombie. " + " Zombie Has " + enemy.getHealth() + " Health");
+                System.out.println(" Player Has Attacked the Zombie! " + player.getDamage() + " damage was done to the Zombie. " + " Zombie Has " + enemy.getHealth() + " Health");
                 player.decearseHealth(Edamage);
-                System.out.println(" Zombie Has Attacked Player! " + enemy.getDamage() + " was done to the Player. " + " Player Has " + player.getHealth() + " Health");
+                System.out.println(" Zombie Has Attacked Player! " + enemy.getDamage() + " damage was done to the Player. " + " Player Has " + player.getHealth() + " Health");
                 
                 
                 if (player.getHealth() <= 0)
