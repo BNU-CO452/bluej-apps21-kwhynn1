@@ -1,28 +1,35 @@
+/**
+* This class is for the commands to be used by the player.
+* 
+*/
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class CommandReader 
 {
+    // variable for the game
     private Game game;
+    // variable for the input
     private Scanner reader; 
-
+    // variables for commands entered by the user
     private String commandWord = null;
     private String word2 = null;
    
+    // Creates a Command Reader Object
     public CommandReader(Game game) 
     {
         this.game = game;
         reader = new Scanner(System.in);
     }
     
-    
+    // Gets Command From User
     public boolean getCommand() 
     {
         String inputLine;  
         
         System.out.print(" > ");
         inputLine = reader.nextLine().toLowerCase();
-
         
         Scanner tokenizer = new Scanner(inputLine);
         
@@ -40,6 +47,7 @@ public class CommandReader
         return executeCommand();
     }
 
+    //Runs the Command entered by User
     private boolean executeCommand()
     {
         if(commandWord.equals(CommandWords.GO.word))
@@ -67,9 +75,7 @@ public class CommandReader
            PlayerStatsCommand stats = new PlayerStatsCommand (game);
            stats.execute();
         }
-       
-
-        
+               
         return false;
     }
 }

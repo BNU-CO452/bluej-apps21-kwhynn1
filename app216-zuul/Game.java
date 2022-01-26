@@ -1,5 +1,8 @@
-import java.util.Scanner;
+/**
+ * This the main class for the game. It is used to run the game.
+ */
 
+import java.util.Scanner;
 
 public class Game 
 {
@@ -9,13 +12,13 @@ public class Game
     private CommandReader reader;
     //varibale used for game loop
     private boolean gameOver;
-    
+    //variable used for player
     public Player player;
-    
+    //variable used for enemy
     public Enemy enemy;
         
     /**
-     * Starts the game and creates a new map/
+     * Constuctor for Game Class
      */
     public Game() 
     {

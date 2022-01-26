@@ -1,13 +1,25 @@
+/**
+ * This class allow the player to move from locattion to location. Inlcued in this class 
+ * is also the attack command and take commands simplied into logical operations
+ */
+
 import java.util.Scanner; 
+
 
 public class GoCommand extends Command
 {
+    //variable for diraction
     String direction;
+    //variable for item
     Item item;
+    //variable for user input
     Scanner reader;
+    //variable for player
     Player player;
+    //variable for enemy
     Enemy enemy;
     
+    //Constructor For GoComand Class
     public GoCommand(Game game, String direction)
     {
         super(game);
@@ -15,6 +27,7 @@ public class GoCommand extends Command
         reader = new Scanner(System.in);
     }    
 
+    // Runs the Go, attack, take comand
     public void execute()
     {
         String ans;
@@ -26,8 +39,8 @@ public class GoCommand extends Command
             return;
         }
 
-        Map map = sk.MAP;
-        Player player = sk.player;
+        Map map = KZ.MAP;
+        Player player = KZ.player;
         
         
         // Try to leave current room.
