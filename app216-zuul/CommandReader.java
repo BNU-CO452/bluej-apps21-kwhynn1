@@ -29,6 +29,7 @@ public class CommandReader
         String inputLine;  
         
         System.out.print(" > ");
+        
         inputLine = reader.nextLine().toLowerCase();
         
         Scanner tokenizer = new Scanner(inputLine);
@@ -68,12 +69,20 @@ public class CommandReader
         {
            MapCommand map = new MapCommand (game);
            map.execute();
-            
         }
         else if(commandWord.equals(CommandWords.STATS.word))
         {
            PlayerStatsCommand stats = new PlayerStatsCommand (game);
            stats.execute();
+        }
+        
+        else 
+        
+        {
+            System.out.println("");
+            System.out.println(" Wrong Command / Invalid syntax ");
+            System.out.println("");
+            
         }
                
         return false;

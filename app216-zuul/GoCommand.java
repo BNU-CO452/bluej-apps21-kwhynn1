@@ -75,7 +75,7 @@ public class GoCommand extends Command
                 System.out.println(map.getCurrentLocation().getLongDescription());  
               
             } 
-            else 
+            else if (ans.equals("n"))
             {
             
             item  = null;
