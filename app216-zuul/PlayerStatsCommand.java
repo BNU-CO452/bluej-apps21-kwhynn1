@@ -20,7 +20,7 @@ public class PlayerStatsCommand extends Command
     //Outpus players information
     public void execute()
     {
-        Player player = game.player;
+        Player player = KZ.player;
         System.out.println();
         System.out.println("Player's Health " + player.getHealth());
         System.out.println("Player's score " + player.getScore());
